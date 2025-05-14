@@ -24,7 +24,7 @@ Desenvolver uma plataforma acessível por navegadores modernos para:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Back-end:** Java, Spring Framework, JPA
+- **Back-end:** Java, Spring Boot, JPA
 - **Front-end:** HTML, CSS, JavaScript
 - **Banco de Dados:** (a definir, exemplo: MySQL)
 - **Gerenciamento:** Trello (Kanban), reuniões semanais
