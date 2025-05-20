@@ -1,0 +1,147 @@
+/* ------------------- General Styles ------------------- */
+/* Universal reset for box-sizing and default margins/paddings */
+* {
+    box-sizing: border-box; /* Makes width and height calculations include padding and border */
+    margin: 0; /* Resets default browser margins */
+    padding: 0; /* Resets default browser paddings */
+}
+
+/* Styles for the main body of the HTML document */
+body {
+    font-family: Arial, sans-serif; /* Sets a common, readable font */
+    background-color: #f4f4f4; /* Light grey background for the page */
+    color: #333; /* Dark grey color for text, providing good contrast */
+    line-height: 1.6; /* Improves readability of text blocks */
+    padding: 20px; /* Adds some space around the entire page content */
+}
+
+/* Styles for the main content area of pages */
+main {
+    padding: 20px; /* Inner spacing for the main content block */
+    background-color: #fff; /* White background to distinguish main content */
+    margin-bottom: 60px; /* Ensures space above the footer, especially if footer were fixed */
+}
+
+/* Default styles for anchor (<a>) tags */
+a {
+    color: #007bff; /* Standard blue for links */
+    text-decoration: none; /* Removes underline from links by default */
+}
+
+/* Hover effect for anchor tags */
+a:hover {
+    text-decoration: underline; /* Adds underline on hover for better UX */
+}
+
+/* ------------------- Header and Footer Styles ------------------- */
+/* Common styles for <header> and <footer> elements */
+header, footer {
+    background-color: #333; /* Dark background for header and footer */
+    color: #fff; /* Light text color for contrast */
+    padding: 1em 0; /* Vertical padding (1em) and no horizontal padding */
+    text-align: center; /* Centers the text content */
+}
+
+/* Specific styles for the <footer> */
+footer {
+    /* position: fixed; */ /* Example: Fixed footer. Currently commented out as it can cause overlap
+                              without careful handling of main content height or using JavaScript. */
+    bottom: 0; /* Aligns to the bottom if position were fixed or absolute */
+    width: 100%; /* Makes footer span the full width */
+    padding: 1em 0; /* Consistent padding with header */
+    margin-top: 20px; /* Adds space above the footer if content is short */
+}
+
+/* ------------------- Navigation and Button Styles ------------------- */
+/* General styles for <button> elements and buttons styled as links */
+/* Targets standalone buttons and buttons nested within <a> tags for consistent appearance. */
+button,
+a[href="#"] button, /* Targets buttons inside <a> tags with href="#" (often placeholders) */
+a[href="create-event.html"] button { /* Specific styling for "Create New Event" button if needed */
+    background-color: #007bff; /* Blue background for buttons */
+    color: white; /* White text on buttons */
+    padding: 10px 15px; /* Padding inside buttons for better clickability */
+    border: none; /* Removes default browser border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-size: 1em; /* Sets a base font size for buttons */
+    margin: 5px; /* Margin around buttons for spacing */
+}
+
+/* Hover effect for buttons */
+button:hover,
+a[href="#"] button:hover,
+a[href="create-event.html"] button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* ------------------- Form Styles (primarily for create-event.html) ------------------- */
+/* Styles for <div> elements wrapping form groups (label and input) */
+form div {
+    margin-bottom: 15px; /* Space below each form group */
+}
+
+/* Styles for <label> elements within forms */
+form label {
+    display: block; /* Makes labels take up their own line */
+    margin-bottom: 5px; /* Space below the label, above the input */
+}
+
+/* Common styles for text input, date input, and textarea elements */
+form input[type="text"],
+form input[type="date"],
+form textarea {
+    width: 100%; /* Makes form fields take the full width of their container */
+    padding: 8px; /* Padding inside form fields */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded corners for form fields */
+}
+
+/* Specific style for <textarea> elements */
+form textarea {
+    height: 100px; /* Default height for textareas, can be overridden */
+}
+
+/* Styles for submit buttons within forms */
+form button[type="submit"] {
+    background-color: #28a745; /* Green background for submit buttons */
+}
+
+/* Hover effect for submit buttons */
+form button[type="submit"]:hover {
+    background-color: #1e7e34; /* Darker green on hover */
+}
+
+/* ------------------- Responsive Design ------------------- */
+/* Media query for screens with a maximum width of 600px (typical for mobile devices) */
+@media (max-width: 600px) {
+    /* Adjustments for smaller screens */
+    body {
+        padding: 10px; /* Reduces overall page padding */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Reduces header font size for smaller screens */
+    }
+
+    /* Styles for navigation links and buttons in nav or main sections on small screens */
+    /* This makes them full-width for easier tapping and better layout. */
+    nav a, nav button, main > a button, main > button {
+        display: block; /* Stack elements vertically */
+        width: calc(100% - 10px); /* Full width minus margin considerations */
+        margin: 10px auto; /* Vertical spacing and horizontal centering */
+        text-align: center; /* Center text within buttons/links */
+    }
+    
+    /* Responsive adjustments for form inputs on small screens */
+    form input[type="text"],
+    form input[type="date"],
+    form textarea {
+        width: calc(100% - 16px); /* Full width minus padding considerations */
+    }
+
+    /* Adjustments for the main content area on small screens */
+    main {
+        padding: 10px; /* Reduces padding within the main content area */
+    }
+}

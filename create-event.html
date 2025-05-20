@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Page for creating a new event -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teskmaster - Create Event</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the main stylesheet -->
+</head>
+<body>
+    <!-- Header Section: Displays the page title -->
+    <header>
+        <h1>Create New Event</h1>
+    </header>
+
+    <!-- Main Content Section: Contains the form for event creation -->
+    <main>
+        <!-- Form for creating a new event.
+             The 'id="createEventForm"' is used by script.js to attach an event listener for validation. -->
+        <form id="createEventForm">
+            <!-- Event Title Input -->
+            <div>
+                <label for="event-title">Event Title:</label>
+                <input type="text" id="event-title" name="event-title"> <!-- 'id="event-title"' is used by script.js for validation -->
+            </div>
+            <!-- Event Date Input -->
+            <div>
+                <label for="event-date">Event Date:</label>
+                <input type="date" id="event-date" name="event-date"> <!-- 'id="event-date"' is used by script.js for validation -->
+            </div>
+            <!-- Event Description Input -->
+            <div>
+                <label for="event-description">Description:</label>
+                <textarea id="event-description" name="event-description"></textarea> <!-- 'id="event-description"' is used by script.js for validation -->
+            </div>
+            <!-- Submit Button for the form -->
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Navigation Section: Link back to the dashboard -->
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </main>
+
+    <!-- Footer Section: Copyright and other footer information -->
+    <footer>
+        <p>© 2023 Teskmaster</p>
+    </footer>
+
+    <!-- JavaScript file for form validation and interactivity -->
+    <script src="script.js" defer></script> <!-- `defer` ensures script executes after HTML parsing -->
+</body>
+</html>
