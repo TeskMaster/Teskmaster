@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Dashboard page for logged-in users to view and manage their events -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teskmaster - Dashboard</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the main stylesheet -->
+</head>
+<body>
+    <!-- Header Section: Displays the page title -->
+    <header>
+        <h1>My Events</h1>
+    </header>
+
+    <!-- Main Content Section: Contains primary actions and event listing -->
+    <main>
+        <!-- Link to navigate to the event creation page -->
+        <a href="create-event.html"><button>Create New Event</button></a>
+
+        <!-- Unordered list to display events.
+             This list will be populated dynamically by script.js
+             (e.g., by fetching data from an API or local storage). -->
+        <ul id="event-list">
+            <!-- Event items will be dynamically added here -->
+        </ul>
+
+        <!-- Navigation Section: For actions like logging out -->
+        <nav>
+            <a href="index.html">Logout</a> <!-- Link to return to the main page (simulating logout) -->
+        </nav>
+    </main>
+
+    <!-- Footer Section: Copyright and other footer information -->
+    <footer>
+        <p>© 2023 Teskmaster</p>
+    </footer>
+
+    <!-- JavaScript file for interactivity -->
+    <script src="script.js" defer></script> <!-- `defer` ensures script executes after HTML parsing -->
+</body>
+</html>
