@@ -2,57 +2,70 @@
 
 Teskmaster é uma aplicação web pensada para facilitar o planejamento e a execução de eventos acadêmicos, corporativos ou sociais, com foco em uma experiência segura, responsiva e intuitiva.
 
-## 🎯 Objetivo
+🎯 Objetivo
 
 Desenvolver uma plataforma acessível por navegadores modernos para:
+
 - Criar e gerenciar eventos
 - Organizar participantes
 - Emitir certificados automaticamente
 - Enviar convites
 - Fornecer visualizações intuitivas de agenda
 
-## 👥 Equipe
-
-| Nome            | Papel             |
-|-----------------|-------------------|
-| Miguel Lobo     | Scrum Master       |
-| Vitor Matias    | Dev Front-End      |
-| Arthur Ribeiro  | Dev Front-End      |
-| João Gomes      | Dev Back-End       |
-| Marcos Túlio    | Dev Back-End       |
-| Marcus Vinícius | Full Stack Dev     |
-
 ## 🛠️ Tecnologias Utilizadas
 
-- **Back-end:** Java, Spring Boot, JPA
-- **Front-end:** HTML, CSS, JavaScript
-- **Banco de Dados:** (a definir, exemplo: MySQL)
-- **Gerenciamento:** Trello (Kanban), reuniões semanais
+- *Back-end:* Java, Spring Framework, JPA
+- *Front-end:* HTML, CSS, JavaScript
+- *Banco de Dados:* (a definir, exemplo: MySQL)
+- *Gerenciamento:* Trello (Kanban), reuniões semanais
 
-## Frontend Beta - Initial Structure
+# Modelos de Processos
 
-### Overview
-This is a beta version of the Teskmaster frontend, providing a basic structure built with HTML, CSS, and JavaScript. The primary goal of this beta is to offer a visual starting point for the application and to demonstrate core page navigation and layout.
+## 🔄 Metodologia de Desenvolvimento
 
-### Files Created
-The following main files have been created for this beta:
--   `index.html`: The main landing page, offering options to "Login" or "Register" (currently placeholder navigation).
--   `dashboard.html`: A mock dashboard page where users would typically view their events and have an option to create new ones.
--   `event-details.html`: A placeholder page intended to display detailed information about a specific event. Content is currently static.
--   `create-event.html`: A page containing a form to create new events. Includes basic client-side validation (e.g., checking for empty required fields).
--   `style.css`: Provides basic styling to ensure a clean, presentable, and responsive layout across the HTML pages.
--   `script.js`: Contains client-side JavaScript for basic interactions, such as form validation for `create-event.html`. It also includes comments and placeholders for future dynamic content loading and API integration.
+Adotamos *Scrum*, com:
 
-### How to Run
-To view this frontend beta:
-1.  Ensure all the HTML, CSS, and JS files (`index.html`, `dashboard.html`, `event-details.html`, `create-event.html`, `style.css`, `script.js`) are in the same directory.
-2.  Open the `index.html` file in any modern web browser (e.g., Chrome, Firefox, Edge, Safari).
+- Sprints quinzenais
+- Reuniões semanais de alinhamento
+- Reuniões de review e planning
+- Product Backlog no Trello
 
-No build steps, server configurations, or backend deployments are required to view this beta version of the frontend. It runs directly in the browser.
+## 🧭 Fluxo de Usuário (Exemplo)
 
-### Implemented Beta Features
--   **Basic Page Structure:** HTML files for key functionalities (landing, dashboard, event details, event creation) are in place.
--   **Navigation:** Hyperlinks connect the pages, allowing for a basic navigational flow.
--   **Responsive Design:** Basic CSS media queries are implemented in `style.css` to adapt the layout for different screen sizes, aiming for usability on both desktop and mobile devices.
--   **Client-Side Validation:** The "Create Event" form in `create-event.html` includes JavaScript to check for empty required fields (title and date) before (mock) submission.
--   **Code Comments:** All files (HTML, CSS, JS) are commented to explain their structure, purpose, and identify areas for future development, including API integration points.
+1. Acessar sistema e autenticar-se
+2. Criar evento com data, título e descrição
+3. Cadastrar participantes via formulário ou importação
+4. Enviar convites automáticos por e-mail
+5. Visualizar cronômetro regressivo
+6. Após o evento, gerar certificados para download
+
+## 📌 Próximos Passos
+
+- Finalizar definição dos papéis
+- Implementar backend com Spring Boot
+- Conectar front-end à API REST
+- Implementar envio de e-mails e geração de certificados
+
+## ✅ Requisitos Funcionais
+
+- *RF01:* Login e autenticação de usuários via token JWT (auth-service)
+- *RF02:* CRUD de eventos com visualização por calendário (event-service)
+- *RF03:* Cadastro, edição e exclusão de participantes vinculados a eventos (participant-service)
+- *RF04:* Envio de convites personalizados por e-mail (notification-service)
+- *RF05:* Temporizador regressivo até o início do evento (timer-service)
+- *RF06:* Emissão automática de certificados ao final do evento (certificate-service)
+- *RF07:* Remanejamento visual de datas dos eventos via front-end
+- *RF08:* Comunicação entre microserviços via API Gateway
+
+## ⚙️ Requisitos Não Funcionais
+
+- *RNF01:* Compatibilidade com navegadores modernos (Chrome, Firefox, Edge)
+- *RNF02:* Proteção de dados com HTTPS, autenticação segura e tokens JWT
+- *RNF03:* Interface responsiva para diferentes tamanhos de tela
+- *RNF04:* Arquitetura escalável e modular, com serviços independentes
+- *RNF05:* Tolerância a falhas em microserviços (fallbacks e retries)
+- *RNF06:* Orquestração e deploy com Docker e Docker Compose
+
+
+
+
